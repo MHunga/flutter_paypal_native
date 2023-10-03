@@ -17,6 +17,9 @@ class FPayPalPurchaseUnit {
     ///please provide reference id,
     ///if ordering more than 2 products
     this.referenceId,
+    this.invoiceId,
+    this.description,
+    this.softDescriptor
   });
 
   ///get amount in currency format 10.00, 50000.00
