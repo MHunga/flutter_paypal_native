@@ -172,6 +172,9 @@ public class FlutterPaypalNativePlugin extends FlutterRegistrarResponder
                                                             .value(purchaseUnit.getPrice())
                                                             .build())
                                             .referenceId(purchaseUnit.getReferenceID())
+                                            .invoiceId(purchaseUnit.getInvoiceId())
+                                            .description(purchaseUnit.getDescription())
+                                            .softDescriptor(purchaseUnit.getSoftDescriptor())
                                             .build());
                         }
                         OrderRequest order = new OrderRequest(

@@ -6,6 +6,9 @@ class FPayPalPurchaseUnit {
   FPayPalCurrencyCode currencyCode;
   double amount;
   String? referenceId;
+  String? invoiceId;
+  String? description;
+  String? softDescriptor;
 
   FPayPalPurchaseUnit({
     this.currencyCode = FPayPalCurrencyCode.usd,
@@ -27,6 +30,9 @@ class FPayPalPurchaseUnit {
       //try to auto generate string
       // ?? StrHelper.getRandomString(16)
       "referenceId": referenceId,
+      "invoiceId": invoiceId,
+      "description": description,
+      "softDescriptor": softDescriptor,
       "price": amountStr,
       "currency": FPayPalCurrencyCodeHelper.convertFromEnumToString(
         currencyCode,
